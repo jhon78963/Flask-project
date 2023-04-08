@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+
+<body>
+    <h1>List of result</h1><br>
+    <table>
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{% result.url %}</td>
+                <td>
+                    <p>Translated: {% result.is_hindi %}</p>
+                    <p>Image quality: {% result.is_high_quality %}</p>
+                    <p>Dropdown work: {% result.is_dropdowns_work %}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>
